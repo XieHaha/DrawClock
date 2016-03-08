@@ -25,9 +25,9 @@ public class CustomView extends View {
     private int w, h;//屏幕的宽高
     private int width, heigh;//自定义view宽高
     private float clockX, clockY;//时钟中心点坐标
-    private float angle;//角度
+    private float angle,angle_sec;//角度
 
-    private double angle_hour, angle_min, angle_sec;
+    private double angle_hour, angle_min;
 
     public CustomView(Context context) {
         super(context);
@@ -54,7 +54,7 @@ public class CustomView extends View {
      */
     public void initData(String date) {
         try {
-            angle_sec = Math.toRadians(Double.valueOf(date.substring(6, 8)) * 6);
+            angle_sec = Float.valueOf(date.substring(6, 8)) * 6;
             angle_min = Math.toRadians(Double.valueOf(date.substring(3, 5)) * 6 + Double.valueOf(date.substring(6, 8)) * 6 / 60);
             angle_hour = Math.toRadians(Double.valueOf(date.substring(0, 2)) * 30 + Double.valueOf(date.substring(3, 5)) * 6 / 12);
         } catch (StringIndexOutOfBoundsException e) {
@@ -151,8 +151,8 @@ public class CustomView extends View {
         canvas.drawCircle(clockX, clockY, 10, paint_cir);
 
         //秒针
-        canvas.drawLine(clockX, clockY, (float) (clockX + (radiu - 130) * Math.sin(angle_sec)),
-                (float) (clockY - (radiu - 170) * Math.cos(angle_sec)), paint_sec);
+        canvas.drawLine(w / 2, h / 3, (float) (w / 2 + (radiu - 130) * Math.sin(Math.toRadians(angle_sec))),
+                (float) (h / 3 - (radiu - 130) * Math.cos(Math.toRadians(angle_sec))), paint_sec);
     }
 
     @Override
