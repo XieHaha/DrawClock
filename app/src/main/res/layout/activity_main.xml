@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:ignore="MissingPrefix">
+
+    <yxh.dundun.customclock.view.CustomView
+        android:id="@+id/paint2_activity_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_little" />
+
+    <LinearLayout
+        android:id="@+id/paint2_activity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/paint2_activity_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="11:27:27"
+            android:textColor="#ff4BB700"
+            android:textSize="36sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/paint2_activity_week"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="星期一"
+                android:textColor="#ff299dff"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/paint2_activity_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2016年03月07日"
+                android:textColor="#ff299dff"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
