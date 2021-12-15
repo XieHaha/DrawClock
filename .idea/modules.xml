@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CustomClock.iml" filepath="$PROJECT_DIR$/CustomClock.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/DrawClock.iml" filepath="$PROJECT_DIR$/.idea/modules/DrawClock.iml" group="DrawClock" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/DrawClock-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/DrawClock-app.iml" group="DrawClock/app" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
